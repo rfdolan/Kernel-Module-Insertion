@@ -5,20 +5,57 @@
 unsigned long **sys_call_table;
 
 asmlinkage long (*ref_sys_cs3013_syscall1)(void);
+asmlinkage long (*ref_sys_read)(void);
+asmlinkage long (*ref_sys_open)(void);
+asmlinkage long (*ref_sys_close)(void);
 
-asmlinkage long new_sys_cs3013_syscall1(void) {
+asmlinkage long new_sys_cs3013_syscall1(void) 
+{
 	printk(KERN_INFO "\"'Hello world?!' More like 'Goodbye, world!' EXTERMINATE!\" -- Dalek");
 	return 0;
 }
 
-static unsigned long **find_sys_call_table(void) {
+/*
+	Our new and improved read function
+*/
+asmlinkage long new_sys_read(void) 
+{
+
+	return 0;
+}
+
+/*
+	 Our new and improved open function
+*/
+asmlinkage long new_sys_open(void) 
+{
+	// Do the new thing
+	return 0;
+}
+
+/*
+	Our new and improved close function
+*/
+asmlinkage long new_sys_close(void)
+{
+
+	return 0;
+}
+
+/*
+	Locates the sys call table and stores it in a pointer
+*/
+static unsigned long **find_sys_call_table(void) 
+{
 	unsigned long int offset = PAGE_OFFSET;
 	unsigned long **sct;
 
-	while (offset < ULLONG_MAX) {
+	while (offset < ULLONG_MAX) 
+	{
 		sct = (unsigned long **)offset;
 
-		if (sct[__NR_close] == (unsigned long *) sys_close) {
+		if (sct[__NR_close] == (unsigned long *) sys_close) 
+		{
 			printk(KERN_INFO "Interceptor: Found syscall table at address: 0x%02lX",
 					(unsigned long) sct);
 			return sct;
@@ -30,7 +67,8 @@ static unsigned long **find_sys_call_table(void) {
 	return NULL;
 }
 
-static void disable_page_protection(void) {
+static void disable_page_protection(void) 
+{
 	/*
 	   Control Register 0 (cr0) governs how the CPU operates.
 
@@ -48,7 +86,8 @@ static void disable_page_protection(void) {
 	write_cr0 (read_cr0 () & (~ 0x10000));
 }
 
-static void enable_page_protection(void) {
+static void enable_page_protection(void) 
+{
 	/*
 	   See the above description for cr0. Here, we use an OR to set the 
 	   16th bit to re-enable write protection on the CPU.
@@ -56,9 +95,11 @@ static void enable_page_protection(void) {
 	write_cr0 (read_cr0 () | 0x10000);
 }
 
-static int __init interceptor_start(void) {
+static int __init interceptor_start(void) 
+{
 	/* Find the system call table */
-	if(!(sys_call_table = find_sys_call_table())) {
+	if(!(sys_call_table = find_sys_call_table())) 
+{
 		/* Well, that didn't work. 
 		   Cancel the module loading step. */
 		return -1;
@@ -80,7 +121,8 @@ static int __init interceptor_start(void) {
 	return 0;
 }
 
-static void __exit interceptor_end(void) {
+static void __exit interceptor_end(void) 
+{
 	/* If we don't know what the syscall table is, don't bother. */
 	if(!sys_call_table)
 		return;
