@@ -15,6 +15,9 @@ asmlinkage long new_sys_cs3013_syscall1(void)
 	return 0;
 }
 
+/*
+	Return true if the buffer contains a virus.
+*/
 int hasVirus(const char* buffer, size_t count)
 {
 	int i = 0;
@@ -40,12 +43,19 @@ int hasVirus(const char* buffer, size_t count)
 */
 asmlinkage long new_sys_read(int fd, void *buff, size_t count) 
 {
+	// Store the return value of the original read function
 	ssize_t returnVal = ref_sys_read(fd, buff, count);
+
+	// Get the user's id
 	int userNum = current_uid().val;	
+
+	// If we aren't the root user, print the message
 	if(hasVirus(buff, count))
 	{
 		printk(KERN_INFO "User %d read from file descriptor: %d, but that read contained malicious code!", userNum, fd);
 	}	
+
+	// Return what we should
 	return returnVal;
 }
 
@@ -55,12 +65,19 @@ asmlinkage long new_sys_read(int fd, void *buff, size_t count)
 */
 asmlinkage long new_sys_open(const char *pathname, int flags, mode_t mode) 
 {
+	// Get the user's id
 	int userNum = current_uid().val;
+
+	// Store the return value of the original open function
 	int returnVal = ref_sys_open(pathname, flags, mode);
+
+	// If we aren't the root user, print the message
 	if(userNum >= 1000)
 	{
 		printk(KERN_INFO "User %d is opening file: %s", userNum, pathname);
 	}
+
+	// Return what we should
 	return returnVal;
 
 }
@@ -71,12 +88,20 @@ asmlinkage long new_sys_open(const char *pathname, int flags, mode_t mode)
 */
 asmlinkage long new_sys_close(int fd)
 {
+
+	// Get the user's id
 	int userNum = current_uid().val;
+
+	// Store the return value of the original close function
 	int returnVal = ref_sys_close(fd);
+
+	// If we aren't the root user, print the message
 	if(userNum >= 1000)
 	{
 		printk(KERN_INFO "User %d is closing file descriptor: %d", userNum, fd);
 	}
+
+	// Return what we should
 	return returnVal;
 }
 
@@ -148,7 +173,7 @@ static int __init interceptor_start(void)
 	ref_sys_cs3013_syscall1 = (void *)sys_call_table[__NR_cs3013_syscall1];
 	ref_sys_read = (void *)sys_call_table[__NR_read];
 	ref_sys_open = (void *)sys_call_table[__NR_open];
-//	ref_sys_close = (void *)sys_call_table[__NR_close];
+	ref_sys_close = (void *)sys_call_table[__NR_close];
 
 	/* Replace the existing system calls */
 	disable_page_protection();
@@ -156,7 +181,7 @@ static int __init interceptor_start(void)
 	sys_call_table[__NR_cs3013_syscall1] = (unsigned long *)new_sys_cs3013_syscall1;
 	sys_call_table[__NR_read] = (unsigned long *)new_sys_read;
 	sys_call_table[__NR_open] = (unsigned long *)new_sys_open;
-//	sys_call_table[__NR_close] = (unsigned long *)new_sys_close;
+	sys_call_table[__NR_close] = (unsigned long *)new_sys_close;
 
 	enable_page_protection();
 
@@ -177,7 +202,7 @@ static void __exit interceptor_end(void)
 	sys_call_table[__NR_cs3013_syscall1] = (unsigned long *)ref_sys_cs3013_syscall1;
 	sys_call_table[__NR_read] = (unsigned long *)ref_sys_read;
 	sys_call_table[__NR_open] = (unsigned long *)ref_sys_open;
-//	sys_call_table[__NR_close] = (unsigned long *)ref_sys_close;
+	sys_call_table[__NR_close] = (unsigned long *)ref_sys_close;
 
 	enable_page_protection();
 

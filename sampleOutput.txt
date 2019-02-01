@@ -1,0 +1,326 @@
+
+aded interceptor!
+[26627.344761] User 1000 is closing file descriptor: 4
+[26627.344823] User 1000 is closing file descriptor: 5
+[26629.300620] User 1000 is opening file: .
+[26629.300674] User 1000 is closing file descriptor: 3
+[26629.300765] User 1000 is opening file: .
+[26629.300798] User 1000 is closing file descriptor: 3
+[26629.301138] User 1000 is opening file: /dev/null
+[26629.301142] User 1000 is closing file descriptor: 3
+[26629.301150] User 1000 is closing file descriptor: 11
+[26629.301152] User 1000 is closing file descriptor: 10
+[26629.301624] User 1000 is opening file: /dev/null
+[26629.301628] User 1000 is closing file descriptor: 3
+[26629.301632] User 1000 is closing file descriptor: 11
+[26629.301635] User 1000 is closing file descriptor: 10
+[26629.302165] User 1000 is closing file descriptor: 5
+[26629.302167] User 1000 is closing file descriptor: 6
+[26629.302168] User 1000 is closing file descriptor: 4
+[26629.302393] User 1000 is closing file descriptor: 5
+[26629.302395] User 1000 is closing file descriptor: 6
+[26629.302447] User 1000 is closing file descriptor: 4
+[26629.302448] User 1000 is closing file descriptor: 3
+[26629.302618] User 1000 is opening file: .
+[26629.302650] User 1000 is closing file descriptor: 3
+[26629.302817] User 1000 is closing file descriptor: 3
+[26629.302949] User 1000 is closing file descriptor: 5
+[26629.302951] User 1000 is closing file descriptor: 6
+[26629.302951] User 1000 is closing file descriptor: 4
+[26629.302978] User 1000 is closing file descriptor: 5
+[26629.302980] User 1000 is closing file descriptor: 6
+[26629.302992] User 1000 is closing file descriptor: 4
+[26629.302993] User 1000 is closing file descriptor: 3
+[26629.303126] User 1000 is opening file: .
+[26629.303151] User 1000 is closing file descriptor: 3
+[26629.303285] User 1000 is closing file descriptor: 3
+[26629.303334] User 1000 is opening file: /tmp/sh-thd-2275543090
+[26629.303354] User 1000 is opening file: /tmp/sh-thd-2275543090
+[26629.303355] User 1000 is closing file descriptor: 3
+[26629.303364] User 1000 is closing file descriptor: 4
+[26629.303501] User 1000 is closing file descriptor: 10
+[26629.303572] User 1000 is opening file: /dev/null
+[26629.303575] User 1000 is closing file descriptor: 3
+[26629.303578] User 1000 is closing file descriptor: 10
+[26629.473706] User 1000 is opening file: /etc/localtime
+[26629.473718] User 1000 is closing file descriptor: 11
+[26629.473755] User 1000 is opening file: /etc/localtime
+[26629.473758] User 1000 is closing file descriptor: 11
+[26630.208949] User 1000 is closing file descriptor: 3
+[26630.208952] User 1000 is closing file descriptor: 4
+[26630.209011] User 1000 is closing file descriptor: 4
+[26630.209016] User 1000 is closing file descriptor: 3
+[26630.209265] User 1000 is opening file: /etc/ld.so.cache
+[26630.209270] User 1000 is closing file descriptor: 3
+[26630.209284] User 1000 is opening file: /lib/i386-linux-gnu/libc.so.6
+[26630.209306] User 1000 is closing file descriptor: 3
+[26630.209466] User 1000 is opening file: /usr/lib/locale/locale-archive
+[26630.209482] User 1000 is closing file descriptor: 3
+[26630.209522] User 1000 is opening file: testFile.c
+[26630.209533] User 1000 read from file descriptor: 3, but that read contained malicious code!
+[26630.209538] User 1000 read from file descriptor: 3, but that read contained malicious code!
+[26630.209543] User 1000 is closing file descriptor: 3
+[26630.209552] User 1000 is closing file descriptor: 1
+[26630.209554] User 1000 is closing file descriptor: 2
+[26630.210259] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.002954] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.002956] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.013426] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.037210] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.037213] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.061537] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.171251] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.171253] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.181599] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.326693] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.326696] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26632.336872] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.198954] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.198960] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.209850] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.543976] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.543982] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.554325] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.734146] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.734153] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26633.744715] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.188245] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.188249] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.198882] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.290696] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.290698] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.301461] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.455422] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.455431] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.466133] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.666796] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.666802] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.677628] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.812136] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.812139] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.822636] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.922171] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.922173] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26634.932866] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.359387] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.359391] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.370036] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.521991] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.521993] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.532488] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.664144] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.664146] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.674750] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.837810] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.837813] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26635.849003] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.045267] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.045270] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.055932] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.438003] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.438005] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26636.448510] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.088228] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.088231] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.098859] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.456010] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.456012] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.466659] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.773642] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.773645] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.784287] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.925991] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.926010] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26637.936953] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26638.144573] User 1000 is closing file descriptor: 3
+[26638.144576] User 1000 is closing file descriptor: 4
+[26638.144667] User 1000 is closing file descriptor: 4
+[26638.144671] User 1000 is closing file descriptor: 3
+[26638.144923] User 1000 is opening file: /usr/lib/sudo/tls/i686/sse2/cmov/libaudit.so.1
+[26638.144927] User 1000 is opening file: /usr/lib/sudo/tls/i686/sse2/libaudit.so.1
+[26638.144930] User 1000 is opening file: /usr/lib/sudo/tls/i686/cmov/libaudit.so.1
+[26638.144933] User 1000 is opening file: /usr/lib/sudo/tls/i686/libaudit.so.1
+[26638.144936] User 1000 is opening file: /usr/lib/sudo/tls/sse2/cmov/libaudit.so.1
+[26638.144939] User 1000 is opening file: /usr/lib/sudo/tls/sse2/libaudit.so.1
+[26638.144941] User 1000 is opening file: /usr/lib/sudo/tls/cmov/libaudit.so.1
+[26638.144944] User 1000 is opening file: /usr/lib/sudo/tls/libaudit.so.1
+[26638.144947] User 1000 is opening file: /usr/lib/sudo/i686/sse2/cmov/libaudit.so.1
+[26638.144950] User 1000 is opening file: /usr/lib/sudo/i686/sse2/libaudit.so.1
+[26638.144953] User 1000 is opening file: /usr/lib/sudo/i686/cmov/libaudit.so.1
+[26638.144956] User 1000 is opening file: /usr/lib/sudo/i686/libaudit.so.1
+[26638.144959] User 1000 is opening file: /usr/lib/sudo/sse2/cmov/libaudit.so.1
+[26638.144962] User 1000 is opening file: /usr/lib/sudo/sse2/libaudit.so.1
+[26638.144965] User 1000 is opening file: /usr/lib/sudo/cmov/libaudit.so.1
+[26638.144969] User 1000 is opening file: /usr/lib/sudo/libaudit.so.1
+[26638.144974] User 1000 is opening file: /etc/ld.so.cache
+[26638.144978] User 1000 is closing file descriptor: 3
+[26638.144990] User 1000 is opening file: /lib/i386-linux-gnu/libaudit.so.1
+[26638.145009] User 1000 is closing file descriptor: 3
+[26638.145015] User 1000 is opening file: /usr/lib/sudo/libselinux.so.1
+[26638.145020] User 1000 is opening file: /lib/i386-linux-gnu/libselinux.so.1
+[26638.145039] User 1000 is closing file descriptor: 3
+[26638.145046] User 1000 is opening file: /usr/lib/sudo/libutil.so.1
+[26638.145051] User 1000 is opening file: /lib/i386-linux-gnu/libutil.so.1
+[26638.145063] User 1000 is closing file descriptor: 3
+[26638.145068] User 1000 is opening file: /usr/lib/sudo/libsudo_util.so.0
+[26638.145098] User 1000 is closing file descriptor: 3
+[26638.145106] User 1000 is opening file: /usr/lib/sudo/libc.so.6
+[26638.145112] User 1000 is opening file: /lib/i386-linux-gnu/libc.so.6
+[26638.145131] User 1000 is closing file descriptor: 3
+[26638.145142] User 1000 is opening file: /usr/lib/sudo/libpcre.so.3
+[26638.145147] User 1000 is opening file: /lib/i386-linux-gnu/libpcre.so.3
+[26638.145162] User 1000 is closing file descriptor: 3
+[26638.145168] User 1000 is opening file: /usr/lib/sudo/libdl.so.2
+[26638.145174] User 1000 is opening file: /lib/i386-linux-gnu/libdl.so.2
+[26638.145188] User 1000 is closing file descriptor: 3
+[26638.145195] User 1000 is opening file: /usr/lib/sudo/libpthread.so.0
+[26638.145200] User 1000 is opening file: /lib/i386-linux-gnu/libpthread.so.0
+[26638.145217] User 1000 is closing file descriptor: 3
+[26638.145533] User 1000 is opening file: /proc/filesystems
+[26638.145560] User 1000 is closing file descriptor: 3
+[26638.145581] User 1000 is opening file: /usr/lib/locale/locale-archive
+[26638.145592] User 1000 is closing file descriptor: 3
+[26638.145626] User 1000 is opening file: /etc/localtime
+[26638.145640] User 1000 is closing file descriptor: 3
+[26638.145671] User 1000 is opening file: /dev/tty
+[26638.145673] User 1000 is closing file descriptor: 3
+[26638.145691] User 1000 is closing file descriptor: 3
+[26638.145698] User 1000 is closing file descriptor: 3
+[26638.145706] User 1000 is opening file: /etc/nsswitch.conf
+[26638.145731] User 1000 is closing file descriptor: 3
+[26638.145740] User 1000 is opening file: /usr/lib/sudo/libnss_compat.so.2
+[26638.145743] User 1000 is opening file: /etc/ld.so.cache
+[26638.145746] User 1000 is closing file descriptor: 3
+[26638.145756] User 1000 is opening file: /lib/i386-linux-gnu/libnss_compat.so.2
+[26638.145774] User 1000 is closing file descriptor: 3
+[26638.145780] User 1000 is opening file: /usr/lib/sudo/libnsl.so.1
+[26638.145785] User 1000 is opening file: /lib/i386-linux-gnu/libnsl.so.1
+[26638.145802] User 1000 is closing file descriptor: 3
+[26638.145838] User 1000 is opening file: /usr/lib/sudo/libnss_nis.so.2
+[26638.145841] User 1000 is opening file: /etc/ld.so.cache
+[26638.145844] User 1000 is closing file descriptor: 3
+[26638.145853] User 1000 is opening file: /lib/i386-linux-gnu/libnss_nis.so.2
+[26638.145867] User 1000 is closing file descriptor: 3
+[26638.145874] User 1000 is opening file: /usr/lib/sudo/libnss_files.so.2
+[26638.145880] User 1000 is opening file: /lib/i386-linux-gnu/libnss_files.so.2
+[26638.145896] User 1000 is closing file descriptor: 3
+[26638.145926] User 1000 is opening file: /etc/passwd
+[26638.145953] User 1000 is closing file descriptor: 3
+[26638.145971] User 1000 is opening file: /proc/sys/kernel/ngroups_max
+[26638.145974] User 1000 is closing file descriptor: 3
+[26638.145989] User 1000 is opening file: /proc/26444/stat
+[26638.145999] User 1000 is closing file descriptor: 3
+[26638.146072] User 1000 is closing file descriptor: 3
+[26638.146099] User 1000 is opening file: /usr/lib/sudo/sudoers.so
+[26638.146123] User 1000 is closing file descriptor: 3
+[26638.146139] User 1000 is opening file: /usr/lib/sudo/libpam.so.0
+[26638.146142] User 1000 is opening file: /usr/lib/sudo/libpam.so.0
+[26638.146146] User 1000 is opening file: /etc/ld.so.cache
+[26638.146150] User 1000 is closing file descriptor: 3
+[26638.146161] User 1000 is opening file: /lib/i386-linux-gnu/libpam.so.0
+[26638.146177] User 1000 is closing file descriptor: 3
+[26638.146300] User 1000 is opening file: /etc/passwd
+[26638.146311] User 1000 is opening file: /etc/default/nss
+[26638.146328] User 1000 is closing file descriptor: 4
+[26638.146338] User 1000 is opening file: /etc/group
+[26638.146349] User 1000 is opening file: /usr/share/locale/locale.alias
+[26638.146375] User 1000 is closing file descriptor: 5
+[26638.146390] User 1000 is opening file: /usr/share/locale/en_US/LC_MESSAGES/sudoers.mo
+[26638.146392] User 1000 is opening file: /usr/share/locale/en/LC_MESSAGES/sudoers.mo
+[26638.146396] User 1000 is opening file: /usr/share/locale-langpack/en_US/LC_MESSAGES/sudoers.mo
+[26638.146398] User 1000 is opening file: /usr/share/locale-langpack/en/LC_MESSAGES/sudoers.mo
+[26638.146430] User 1000 is opening file: /etc/passwd
+[26638.146455] User 1000 is closing file descriptor: 5
+[26638.146470] User 1000 is closing file descriptor: 5
+[26638.146477] User 1000 is closing file descriptor: 5
+[26638.146483] User 1000 is opening file: /etc/group
+[26638.146509] User 1000 is closing file descriptor: 5
+[26638.146514] User 1000 is opening file: /etc/group
+[26638.146521] User 1000 is closing file descriptor: 5
+[26638.146526] User 1000 is opening file: /etc/group
+[26638.146535] User 1000 is closing file descriptor: 5
+[26638.146541] User 1000 is opening file: /etc/group
+[26638.146551] User 1000 is closing file descriptor: 5
+[26638.146556] User 1000 is opening file: /etc/group
+[26638.146566] User 1000 is closing file descriptor: 5
+[26638.146571] User 1000 is opening file: /etc/group
+[26638.146584] User 1000 is closing file descriptor: 5
+[26638.146589] User 1000 is opening file: /etc/group
+[26638.146606] User 1000 is closing file descriptor: 5
+[26638.146611] User 1000 is opening file: /etc/group
+[26638.146632] User 1000 is closing file descriptor: 5
+[26638.146639] User 1000 is opening file: /etc/nsswitch.conf
+[26638.146656] User 1000 is closing file descriptor: 5
+[26638.146900] User 1000 is opening file: /proc/sys/kernel/ngroups_max
+[26638.146903] User 1000 is closing file descriptor: 8
+[26638.146920] User 1000 is opening file: /etc/group
+[26638.146949] User 1000 is closing file descriptor: 8
+[26638.146957] User 1000 is opening file: /etc/group
+[26638.146962] User 1000 is closing file descriptor: 8
+[26638.147150] User 1000 is opening file: /etc/pam.d/sudo
+[26638.147167] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_env.so
+[26638.147184] User 1000 is closing file descriptor: 9
+[26638.147223] User 1000 is opening file: /etc/pam.d/common-auth
+[26638.147241] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_unix.so
+[26638.147270] User 1000 is closing file descriptor: 10
+[26638.147278] User 1000 is opening file: /usr/lib/sudo/libcrypt.so.1
+[26638.147280] User 1000 is opening file: /etc/ld.so.cache
+[26638.147283] User 1000 is closing file descriptor: 10
+[26638.147292] User 1000 is opening file: /lib/i386-linux-gnu/libcrypt.so.1
+[26638.147306] User 1000 is closing file descriptor: 10
+[26638.147384] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_deny.so
+[26638.147396] User 1000 is closing file descriptor: 10
+[26638.147410] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_permit.so
+[26638.147423] User 1000 is closing file descriptor: 10
+[26638.147438] User 1000 is closing file descriptor: 9
+[26638.147444] User 1000 is opening file: /etc/pam.d/common-account
+[26638.147459] User 1000 is closing file descriptor: 9
+[26638.147464] User 1000 is opening file: /etc/pam.d/common-session-noninteractive
+[26638.147482] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_umask.so
+[26638.147494] User 1000 is closing file descriptor: 10
+[26638.147518] User 1000 is closing file descriptor: 9
+[26638.147522] User 1000 is closing file descriptor: 8
+[26638.147525] User 1000 is opening file: /etc/pam.d/other
+[26638.147533] User 1000 is opening file: /etc/pam.d/common-auth
+[26638.147549] User 1000 is closing file descriptor: 9
+[26638.147553] User 1000 is opening file: /etc/pam.d/common-account
+[26638.147567] User 1000 is closing file descriptor: 9
+[26638.147571] User 1000 is opening file: /etc/pam.d/common-password
+[26638.147590] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_gnome_keyring.so
+[26638.147601] User 1000 is closing file descriptor: 10
+[26638.147640] User 1000 is closing file descriptor: 9
+[26638.147646] User 1000 is opening file: /etc/pam.d/common-session
+[26638.147668] User 1000 is opening file: /lib/i386-linux-gnu/security/pam_systemd.so
+[26638.147681] User 1000 is closing file descriptor: 10
+[26638.147688] User 1000 is opening file: /usr/lib/sudo/librt.so.1
+[26638.147691] User 1000 is opening file: /etc/ld.so.cache
+[26638.147694] User 1000 is closing file descriptor: 10
+[26638.147702] User 1000 is opening file: /lib/i386-linux-gnu/librt.so.1
+[26638.147715] User 1000 is closing file descriptor: 10
+[26638.147722] User 1000 is opening file: /usr/lib/sudo/libpam_misc.so.0
+[26638.147726] User 1000 is opening file: /lib/i386-linux-gnu/libpam_misc.so.0
+[26638.147738] User 1000 is closing file descriptor: 10
+[26638.147742] User 1000 is opening file: /usr/lib/sudo/libgcc_s.so.1
+[26638.147748] User 1000 is opening file: /lib/i386-linux-gnu/libgcc_s.so.1
+[26638.147758] User 1000 is closing file descriptor: 10
+[26638.147894] User 1000 is closing file descriptor: 9
+[26638.147897] User 1000 is closing file descriptor: 8
+[26638.147907] User 1000 is opening file: /var/run/sudo/ts/cshue
+[26638.147912] User 1000 is opening file: /proc/stat
+[26638.147922] User 1000 is closing file descriptor: 9
+[26638.147965] User 1000 is closing file descriptor: 8
+[26638.148030] User 1000 is closing file descriptor: 5
+[26638.148080] User 1000 is closing file descriptor: 3
+[26638.148085] User 1000 is closing file descriptor: 4
+[26638.148097] User 1000 is opening file: /etc/passwd
+[26638.148101] User 1000 is opening file: /etc/group
+[26638.148106] User 1000 is opening file: /etc/passwd
+[26638.148115] User 1000 is closing file descriptor: 8
+[26638.148118] User 1000 is closing file descriptor: 3
+[26638.148122] User 1000 is closing file descriptor: 4
+[26638.148129] User 1000 is opening file: /etc/passwd
+[26638.148134] User 1000 is closing file descriptor: 3
+[26638.152292] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26638.152294] User 1000 read from file descriptor: 13, but that read contained malicious code!
+[26638.153372] Unloaded interceptor!
+
