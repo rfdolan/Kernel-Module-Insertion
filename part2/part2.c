@@ -1,6 +1,10 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/syscalls.h>
+#include <linux/list.h>
+#include <linux/types.h>
+#include <linux/sched.h>
+#include <linux/slab.h>
 
 unsigned long **sys_call_table;
 
@@ -21,12 +25,37 @@ asmlinkage long new_sys_cs3013_syscall1(void)
 	return 0;
 }
 
-asmlinkage long cs3013_syscall2(unsigned short *target_pid, struct ancestry *response)
+asmlinkage long new_sys_cs3013_syscall2(unsigned short *target_pid, struct ancestry *response)
 {
-
 
 	return 0;
 }
+
+/*
+    Locates the sys call table and stores it in a pointer
+*/
+static unsigned long **find_sys_call_table(void)
+{
+    unsigned long int offset = PAGE_OFFSET;
+    unsigned long **sct;
+
+    while (offset < ULLONG_MAX)
+    {
+        sct = (unsigned long **)offset;
+
+        if (sct[__NR_close] == (unsigned long *) sys_close)
+        {
+            printk(KERN_INFO "Interceptor: Found syscall table at address: 0x%02lX",
+                    (unsigned long) sct);
+            return sct;
+        }
+
+        offset += sizeof(void *);
+    }
+
+    return NULL;
+}
+
 
 static void disable_page_protection(void) 
 {
