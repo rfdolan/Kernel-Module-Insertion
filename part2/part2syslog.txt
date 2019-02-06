@@ -1,0 +1,13 @@
+
+loaded interceptor!
+[33763.952513] We found the task!
+[33763.952516] Child pid: 1284
+[33763.952517] Sibling pid: 2772
+[33763.952518] Sibling pid: 22100
+[33763.952519] Ancestor pid: 2766
+[33763.952520] Ancestor pid: 1124
+[33763.952521] Ancestor pid: 1113
+[33763.952522] Ancestor pid: 842
+[33763.952523] Ancestor pid: 1
+[33763.969287] Unloaded interceptor!
+

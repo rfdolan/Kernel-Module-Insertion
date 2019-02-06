@@ -5,7 +5,8 @@
 #include <linux/types.h>
 #include <linux/sched.h>
 #include <linux/slab.h>
-
+#include <asm/errno.h>
+//#include <asm/current.h>
 unsigned long **sys_call_table;
 
 
@@ -19,6 +20,8 @@ struct ancestry
 	pid_t children[100];
 };
 
+
+
 asmlinkage long new_sys_cs3013_syscall1(void) 
 {
 	printk(KERN_INFO "\"'Hello world?!' More like 'Goodbye, world!' EXTERMINATE!\" -- Dalek");
@@ -27,6 +30,88 @@ asmlinkage long new_sys_cs3013_syscall1(void)
 
 asmlinkage long new_sys_cs3013_syscall2(unsigned short *target_pid, struct ancestry *response)
 {
+
+	int childrenInc = 0;
+	int siblingsInc = 0;
+	int ancestorsInc = 0;
+	pid_t zero = 0;
+	// Allocate space in the kernel space for the target pid
+	unsigned short theTarget;
+
+	struct task_struct *ourTask;
+
+	struct task_struct *pos;
+	if(copy_from_user(&theTarget, target_pid, sizeof(unsigned short))){
+		return EFAULT;
+	}
+
+	// Get the task struct at our tast	
+	ourTask = pid_task((find_get_pid(theTarget)), PIDTYPE_PID);
+
+	printk(KERN_INFO "We found the task!\n");	
+
+	// Loop through the siblings of one of our children
+	list_for_each_entry( pos ,&ourTask->children, sibling){
+		// As long as we aren't maxing out the array, go	
+		if(childrenInc < 100){
+			// If we receive some kind of error, fault	
+			if(copy_to_user(&response->children[childrenInc], &pos->pid, sizeof(pid_t))){
+		
+				return EFAULT;
+			}
+			// Print and increment	
+			printk(KERN_INFO "Child pid: %hu\n", pos->pid);
+			childrenInc++;
+		}
+	}
+
+	// If we have less than the max number of items in the array, pad with zeroes
+	if(childrenInc < 100){
+		copy_to_user(&response->children[childrenInc], &zero, sizeof(pid_t));
+	}
+
+	//Loop through the siblings of our node
+	list_for_each_entry(pos, &ourTask->sibling, sibling){
+		// As long as we aren't maxing out the array, go.
+		if(siblingsInc < 100){
+			if(pos->pid != 0){
+				
+				// If we receive some kind of error, fault
+				if(copy_to_user(&response->siblings[siblingsInc], &pos->pid, sizeof(pid_t))){
+					return EFAULT;
+				}
+				// Print and increment
+				printk(KERN_INFO "Sibling pid: %hu\n", pos->pid);
+			
+				siblingsInc++;
+			}
+		}
+	}
+	
+	// If we have less than the max number of items in the array, pad with zeroes
+	if(siblingsInc < 100){
+		copy_to_user(&response->siblings[siblingsInc], &zero, sizeof(pid_t));
+	}
+
+	// Go up the process ancestry
+	ourTask = ourTask->real_parent;
+	while(ourTask->pid != 0 ){
+		if(ancestorsInc < 10){
+			// If we reach an error, fault	
+			if(copy_to_user(&response->ancestors[ancestorsInc], &ourTask->pid, sizeof(pid_t))){
+				return EFAULT;
+			}
+			// Print the ancestor's pid to the kernel and increment
+			printk(KERN_INFO "Ancestor pid: %hu\n", ourTask->pid);
+			ancestorsInc++;	
+			ourTask = ourTask->real_parent;
+		}
+	}	
+	
+	// If we have less than the max number of items in the array, pad with zeros
+	if(ancestorsInc < 10){
+		copy_to_user(&response->ancestors[ancestorsInc], &zero, sizeof(pid_t));
+	}
 
 	return 0;
 }

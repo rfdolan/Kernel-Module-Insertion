@@ -17,7 +17,7 @@ long testCall2 ( void)
 	return (long) syscall(__NR_cs3013_syscall2);
 }
 
-long testCall3 ( void)
+long testCall3 ( 1)
 {
 	return (long) syscall(__NR_cs3013_syscall3);
 }

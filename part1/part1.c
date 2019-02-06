@@ -22,16 +22,12 @@ int hasVirus(const char* buffer, size_t count)
 {
 	int i = 0;
 	while(i < count){
-		if(buffer[i] == 'V'){
-			if(buffer[i+1] == 'I'){
-				if(buffer[i+2] == 'R'){
-					if(buffer[i+3] == 'U'){
-						if(buffer[i+4] == 'S'){
-							return 1;
-						}
-					}
-				}
-			}
+		if((buffer[i] == 'V') &&
+			(buffer[i+1] == 'I') &&
+			(buffer[i+2] == 'R') &&
+			(buffer[i+3] == 'U') &&
+			(buffer[i+4] == 'S')){
+				return 1;
 		}
 		i++;
 	}
